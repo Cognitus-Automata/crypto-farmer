@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctp08vwp2er4"]
+
+[ext_resource type="PackedScene" uid="uid://c4pgbgmg4l7s7" path="res://Scenes/Player.tscn" id="1_a2p2g"]
+[ext_resource type="Texture2D" uid="uid://8y763qpmil2d" path="res://assets/icon.svg" id="1_bu3vp"]
+[ext_resource type="PackedScene" uid="uid://cf07s54obcuuf" path="res://Scenes/GameCamera.tscn" id="2_j3p34"]
+
+[node name="Node" type="Node"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("1_bu3vp")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_a2p2g")]
+player_speed = 50.0
+
+[node name="Camera2D" parent="." instance=ExtResource("2_j3p34")]
